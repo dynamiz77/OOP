@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kyle
- * Date: 2/21/16
- * Time: 10:14 AM
- */
+
+interface AccessDatabase
+{
+    public function all();
+    public function create($object);
+    public function get($id);
+    public function update($object);
+    public function delete($id);
+}

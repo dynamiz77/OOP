@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kyle
- * Date: 2/21/16
- * Time: 8:48 AM
- */
+
+class Player
+{
+    private $pokemon = array();
+    private $pokemonDb;
+    private $id;
+
+    public function __construct()
+    {
+        $this->pokemonDb = new AccessPokemonDatabase($this->id);
+    }
+}

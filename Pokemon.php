@@ -8,6 +8,7 @@
 
 abstract class Pokemon {
     protected $charger;
+    protected $playerId;
     abstract public function physicalAbility();
     abstract public function specialAbility();
 }
