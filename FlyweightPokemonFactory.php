@@ -14,9 +14,9 @@ class FlyweightPokemonFactory
 
     function __construct()
     {
-        $this->pokemons['pikaChu'] = NULL;
-        $this->pokemons['charmander'] = NULL;
-        $this->pokemons['squirtle'] = NULL;
+        $this->pokemons['PikaChu'] = NULL;
+        $this->pokemons['Charmander'] = NULL;
+        $this->pokemons['Squirtle'] = NULL;
     }
 
     function getBook($pokemonKey)
