@@ -19,7 +19,7 @@ class FlyweightPokemonFactory
         $this->pokemons['Squirtle'] = NULL;
     }
 
-    function getBook($pokemonKey)
+    function getPokemon($pokemonKey)
     {
         if (NULL == $this->pokemons[$pokemonKey])
         {
