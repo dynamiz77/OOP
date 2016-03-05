@@ -22,7 +22,7 @@ class PikaChu extends Pokemon
     {
         // Composition
         $this->charger = new PikaChuCharger();
-        $this->lightningCrystal = $this->charger->crystalCreateAndInfuse();
+        $this->lightningCrystal = $this->charger->crystalInfuse();
     }
 
     public function physicalAbility()
@@ -40,7 +40,7 @@ class PikaChu extends Pokemon
     {
         $this->lightningBolt = 'lightning strike!';
         $this->lightningCrystal = null;
-        $this->charger->crystalCreateAndInfuse();
+        $this->charger->crystalInfuse();
 
         return $this->lightningBolt;
     }
@@ -55,7 +55,7 @@ class Charmander extends Pokemon
     public function  __construct()
     {
         $this->charger = new CharmanderCharger();
-        $this->fireCrystal = $this->charger->crystalCreateAndInfuse();
+        $this->fireCrystal = $this->charger->crystalInfuse();
     }
 
     public function physicalAbility()
@@ -72,7 +72,7 @@ class Charmander extends Pokemon
     {
         $this->fireball = 'fireball blast!';
         $this->fireCrystal = null;
-        $this->charger->crystalCreateAndInfuse();
+        $this->charger->crystalInfuse();
 
         return $this->fireball;
     }
@@ -86,8 +86,8 @@ class Squirtle extends Pokemon
 
     public function __construct()
     {
-        $this->charger = new CharmanderCharger();
-        $this->waterCrystal = $this->charger->crystalCreateAndInfuse();
+        $this->charger = new SquirtleCharger();
+        $this->waterCrystal = $this->charger->crystalInfuse();
     }
 
     public function physicalAbility()
@@ -105,7 +105,7 @@ class Squirtle extends Pokemon
     {
         $this->waterSpike = 'water spike!';
         $this->waterCrystal = null;
-        $this->charger->crystalCreateAndInfuse();
+        $this->charger->crystalInfuse();
 
         return $this->waterSpike;
     }
