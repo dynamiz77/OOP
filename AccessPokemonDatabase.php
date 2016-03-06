@@ -4,10 +4,12 @@
 class AccessPokemonDatabase implements AccessDatabase
 {
     private $playerId;
+    private $dbConnection;
 
-    public function __construct($playerId)
+    public function __construct(DBConnectionInterface $dbConnection, $playerId)
     {
         $this->playerId = $playerId;
+        $this->dbConnection = $dbConnection;
     }
 
     public function all()

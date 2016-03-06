@@ -27,7 +27,7 @@ class FireCrystalFactory extends Crystalfactory
 
 class WaterCrystalFactory extends Crystalfactory
 {
-    public function makecrystal()
+    public function makeCrystal()
     {
         // ... does other complex tasks specific only to a fireCrystal
         // to generate the actual water crystal element...

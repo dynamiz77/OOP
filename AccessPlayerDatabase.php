@@ -3,6 +3,12 @@
 
 class AccessPlayerDatabase implements AccessDatabase
 {
+    private $dbConnection;
+
+    public function __construct(DBConnectionInterface $dbConnection)
+    {
+        $this->dbConnection = $dbConnection;
+    }
 
     public function all()
     {
