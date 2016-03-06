@@ -7,9 +7,16 @@ class Player
     private $pokemonDb;
     private $id;
 
-    public function __construct()
+    public function __construct($name, $id)
     {
-        $this->pokemonDb = new AccessPokemonDatabase($this->id);
+        $this->name = $name;
+        $this->id = $id;
+        $this->pokemonDb = new AccessPokemonDatabase(new MySQLConnection(), $this->id);
+        $pokemons = $this->pokemonDb->getAllById($id);
+        foreach($pokemons as $pokemon)
+        {
+            array_push($this->pokemon, $pokemon);
+        }
     }
 
     public function callCommand(PokemonBuffCommand $pokemonCommandIn)
@@ -18,7 +25,7 @@ class Player
     }
 }
 
-$player = new Player();
+$player = new Player('Tyler', 24);
 
 $pokemon = new PikaChu();
 

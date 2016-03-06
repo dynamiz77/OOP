@@ -20,9 +20,14 @@ class AccessPokemonDatabase implements AccessDatabase
     {
         // create a single pokemon for player
     }
-    public function get($pokemonId)
+    public function get($playerId)
     {
         // get a single pokemon for player
+    }
+
+    public function getAllById($playerId)
+    {
+        // get all of player's pokemon
     }
     public function update($pokemon)
     {
