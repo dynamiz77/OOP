@@ -15,39 +15,35 @@ abstract class PokemonCharger
         $this->crystal->powerGauge = 100;
     }
 
-    abstract public function crystalInfuse();
+    protected function infuse(CrystalFactory $crystalFactory)
+    {
+        $this->crystal = $crystalFactory->makeCrystal();
+        $this->chargeCrystal();
+
+        return $this->crystal;
+    }
+
+    abstract public function crystalInfuser();
 }
 
 class PikaChuCharger extends PokemonCharger
 {
-    public function crystalInfuse(){
-        $lightningCrystalFactory = new LightningCrystalFactory();
-        $this->crystal = $lightningCrystalFactory->makeCrystal();
-        $this->chargeCrystal();
-
-        return $this->crystal;
+    public function crystalInfuser(){
+        return $this->infuse(new LightningCrystalFactory());
     }
 }
 
 class CharmanderCharger extends PokemonCharger
 {
-    public function crystalInfuse(){
-        $fireCrystalFactory = new FireCrystalFactory();
-        $this->crystal = $fireCrystalFactory->makeCrystal();
-        $this->chargeCrystal();
-
-        return $this->crystal;
+    public function crystalInfuser(){
+        return $this->infuse(new FireCrystalFactory());
     }
 }
 
 class SquirtleCharger extends PokemonCharger
 {
-    public function crystalInfuse(){
-        $waterCrystalFactory = new WaterCrystalFactory();
-        $this->crystal = $waterCrystalFactory->makeCrystal();
-        $this->chargeCrystal();
-
-        return $this->crystal;
+    public function crystalInfuser(){
+        return $this->infuse(new WaterCrystalFactory());
     }
 }
 
