@@ -3,11 +3,11 @@
 abstract class Crystal {
     public $powerGauge;
 }
-class lightningCrystal extends Crystal
+class LightningCrystal extends Crystal
 {}
 
-class fireCrystal extends Crystal
+class FireCrystal extends Crystal
 {}
 
-class waterCrystal extends Crystal
+class WaterCrystal extends Crystal
 {}

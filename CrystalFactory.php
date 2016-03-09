@@ -11,7 +11,7 @@ class LightningCrystalFactory extends Crystalfactory
     {
         //...does other complex tasks specific only to a lightningCrystal
         // to generate the actual lightning crystal...
-        return new lightningCrystal();
+        return new LightningCrystal();
     }
 }
 
@@ -21,7 +21,7 @@ class FireCrystalFactory extends Crystalfactory
     {
         // ... does other complex tasks specific only to a fireCrystal
         // to generate the actual fire crystal element...
-        return new fireCrystal();
+        return new FireCrystal();
     }
 }
 
@@ -31,6 +31,6 @@ class WaterCrystalFactory extends Crystalfactory
     {
         // ... does other complex tasks specific only to a fireCrystal
         // to generate the actual water crystal element...
-        return new waterCrystal();
+        return new WaterCrystal();
     }
 }
